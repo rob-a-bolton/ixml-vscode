@@ -1,0 +1,25 @@
+{
+  "name": "ixml-syntax-highlighting",
+  "displayName": "iXML Syntax Highlighting",
+  "description": "Adds support for iXML (invisible XML) grammar",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ixml",
+      "aliases": ["iXML", "ixml"],
+      "extensions": [".ixml"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "ixml",
+      "scopeName": "source.ixml",
+      "path": "./syntaxes/ixml.tmLanguage.json"
+    }]
+  }
+}

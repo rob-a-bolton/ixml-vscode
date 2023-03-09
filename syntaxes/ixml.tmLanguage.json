@@ -1,0 +1,103 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "iXML",
+	"patterns": [
+		{ "include": "#versionString" },
+		{ "include": "#comment" },
+		{
+			"name": "meta.selector",
+			"match": "^\\s*-"
+		},
+		{ "include": "#ruleDefName" },
+		{ "include": "#ruleDefinition" }
+	],
+	"repository": {
+		"comment": {
+			"name": "comment.block",
+			"begin": "\\{",
+			"end": "\\}"
+		},
+		"ruleDefinition": {
+			"name": "ixml.rule.definition",
+			"begin": "[:=]",
+			"end": "[.]",
+			"patterns": [
+				{ "include": "#comment" },
+				{ "include": "#match" }
+			]
+		},
+		"match": {
+			"patterns": [
+				{ "include": "#group" },
+				{ "include": "#character" },
+				{ "include": "#characterClass" },
+				{ "include": "#group" },
+				{ "include": "#ruleName" },
+				{ "include": "#doubleStrings" },
+				{ "include": "#singleStrings" },
+				{ "include": "#modifiers" }
+			]
+		},
+
+		"group": {
+			"begin": "\\(",
+			"end": "\\)",
+			"patterns": [
+				{ "include": "#comment" },
+				{ "include": "#match" }
+			]
+		},
+
+		"modifiers": {
+			"name": "meta.selector",
+			"match": "[?~+-@]"
+		},
+
+		"character": {
+			"name": "constant.numeric",
+			"match": "(#[0-9A-Fa-f]+)"
+		},
+		"ruleDefName": {
+			"name": "variable.name",
+			"match": "\\b(_?[^?#+., (){}\\[\\]@-][^?#+., (){}\\[\\]]*)\\s*(?=[:=])"
+		},
+		"ruleName": {
+			"name": "entity.name.tag",
+			"match": "(?<!#)\\b(_?[^?#+., (){}\\[\\]@-][^?#+., (){}\\[\\]]*)\\s*"
+		},
+		"versionString": {
+			"name": "keyword.other.ixml",
+			"match": "\\b(ixml\\s+version)\\b"
+		},
+		"characterClass": {
+			"begin": "\\[",
+			"end": "\\]",
+			"patterns": [
+				{
+					"include": "#doubleStrings"
+				},
+				{
+					"include": "#singleStrings"
+				},
+				{
+					"include": "#character"
+				},
+				{
+					"match": ";",
+					"name": "constant.other"
+				}
+			]
+		},
+		"doubleStrings": {
+			"name": "string.quoted.double.ixml",
+			"begin": "\"",
+			"end": "\""
+		},
+		"singleStrings": {
+			"name": "string.quoted.single.ixml",
+			"begin": "'",
+			"end": "'"
+		}
+	},
+	"scopeName": "source.ixml"
+}
