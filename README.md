@@ -9,6 +9,10 @@ It has been tested against both the Oberon sample found on John Lumley's [jwiXML
 
 Basic support for iXML, should work well enough with most themes.
 
+## Installation
+
+Via the vscode [marketplace](https://marketplace.visualstudio.com/items?itemName=rob-a-bolton.ixml-syntax-highlighting) page or package it with [vsce](https://github.com/microsoft/vscode-vsce) to produce an installable extension file.
+
 ## Release Notes
 
 
