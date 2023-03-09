@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2023-03-09
+
+- Lowered required VSCode version to 1.70.0 from 1.76.0
+
 ## [0.1.0] - 2023-03-08
 
 - Initial release
