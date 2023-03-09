@@ -2,6 +2,10 @@
   "name": "ixml-syntax-highlighting",
   "displayName": "iXML Syntax Highlighting",
   "description": "Adds support for iXML (invisible XML) grammar",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rob-a-bolton/ixml-vscode"
+  },
   "version": "0.1.0",
   "engines": {
     "vscode": "^1.76.0"
