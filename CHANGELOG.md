@@ -7,10 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2025-09-22
+
+### Added
+
+- Added nesting for comments
+
+### Changed
+
+- Added project icon
+- Fixed CHANGELOG.md formatting
+
 ## [0.1.1] - 2023-03-09
 
+### Changed
 - Lowered required VSCode version to 1.70.0 from 1.76.0
 
 ## [0.1.0] - 2023-03-08
 
+### Added
 - Initial release

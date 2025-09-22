@@ -15,7 +15,8 @@
 		"comment": {
 			"name": "comment.block",
 			"begin": "\\{",
-			"end": "\\}"
+			"end": "\\}",
+			"patterns": [{ "include": "#comment" }]
 		},
 		"ruleDefinition": {
 			"name": "ixml.rule.definition",
